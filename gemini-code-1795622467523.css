@@ -1,0 +1,121 @@
+:root {
+  /* Colores representativos de PLENIA */
+  --forest: #15594f;   /* Verde principal (botones, títulos) */
+  --deep: #0d4039;     /* Verde oscuro (hover, textos fuertes) */
+  --sage: #83a98e;     /* Verde salvia (acentos suaves) */
+  --mint: #dcebe0;     /* Verde menta (fondo de íconos) */
+  --cream: #fbf8ef;    /* Crema cálido (fondo general) */
+  --ink: #203b36;      /* Texto principal */
+  --muted: #657873;    /* Texto secundario */
+  --white: #fffefa;    /* Fondo de tarjetas */
+  --line: #dce5dc;     /* Bordes sutiles */
+  --shadow: 0 12px 32px rgba(25, 70, 59, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+.encabezado {
+  margin-bottom: 36px;
+}
+
+.etiqueta {
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--deep);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 8px 0 12px;
+  letter-spacing: -0.04em;
+}
+
+.subtitulo {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* Cuadrícula de opciones */
+.grid-opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Diseño de cada tarjeta */
+.tarjeta-video {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-video:hover {
+  transform: translateY(-4px);
+  border-color: var(--sage);
+}
+
+.icono {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: var(--mint);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.tarjeta-video h2 {
+  color: var(--deep);
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+.tarjeta-video p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+
+/* Botón que lleva a YouTube */
+.btn-youtube {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--forest);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.btn-youtube:hover {
+  background: var(--deep);
+}
